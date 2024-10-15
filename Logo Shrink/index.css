@@ -79,7 +79,6 @@ nav {
   z-index: 9999;
   height: 120px;
   background: var(--bg);
-
 }
 
 .nav-links {
@@ -87,7 +86,7 @@ nav {
   position: relative;
   height: 100px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   z-index: 9999;
 }
@@ -98,6 +97,9 @@ nav {
 
 .nav-links li a {
   font-weight: 600;
+}
+.nav-links li.center a{
+  font-weight: 400;
 }
 .sans {
   font-family: "Neue Haas Grotesk Display Pro";
@@ -117,16 +119,13 @@ nav {
 
 .center {
   position: absolute;
-  left: 44%;
-  top: 50px;
-
-  transform: translateY(-44%);
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
   z-index: 1000;
+ 
 }
 
-.center a {
-  /* font-size: clamp(2rem, 6vw + 1rem, 4rem); */
-}
 
 .img-container {
   width: 100%;
@@ -136,9 +135,11 @@ nav {
   height: 100vh;
   width: 100%;
   position: relative;
+  /* background-color: red; */
 }
 .content img {
   width: 100%;
+  object-position: top;;
   z-index: 1;
 }
 .img-container::-webkit-scrollbar {

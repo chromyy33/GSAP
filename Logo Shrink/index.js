@@ -9,11 +9,12 @@ const tl = gsap.timeline();
 // Animate the logo position and scale
 tl.from(centerLogo, {
   top: "50vh",
-  scale: 2,
+  scale: 3,
   scrollTrigger: {
     trigger: imgContainer,
     markers: true,
     start: "top",
+   
     scrub: true,
   },
 });
