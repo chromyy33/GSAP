@@ -1,0 +1,164 @@
+/* Font Imports */
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("./PPEditorialNew-Italic-BF644b214fb0c0a.otf") format("opentype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PP Editorial New Regular";
+  src: url("./PPEditorialNew-Regular-BF644b214ff145f.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PP Editorial New Ultrabold";
+  src: url("./PPEditorialNew-Ultrabold-BF644b21500840c.otf") format("opentype");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "PP Editorial New Ultralight";
+  src: url("./PPEditorialNew-Ultralight-BF644b21500d0c0.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "PP Editorial New Ultrabold Italic";
+  src: url("./PPEditorialNew-UltraboldItalic-BF644b214faef01.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: 800;
+}
+
+/* Root Variables */
+:root {
+  --bg: #fbeddc;
+  --text: #37332d;
+  --red: #d6433c;
+  --yellow: #b7801f;
+  --offWhite: #fbeddc;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "PP Editorial New Regular", "Neue Haas Grotesk Display Pro",
+    serif;
+  color: var(--text);
+}
+
+html,
+body {
+  width: 100%;
+  background-color: var(--bg);
+  font-size: clamp(1rem, 1rem + 0.25vw, 1.5rem);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+main {
+  padding: 0 clamp(0.5rem, 2vw + 0.5rem, 3rem);
+}
+nav {
+  position: fixed;
+  padding: 1rem 0;
+  width: 95%;
+  z-index: 9999;
+  height: 120px;
+  background: var(--bg);
+
+}
+
+.nav-links {
+  width: 95%;
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9999;
+}
+.nav-links li {
+  text-align: center;
+  font-size: 12px;
+}
+
+.nav-links li a {
+  font-weight: 600;
+}
+.sans {
+  font-family: "Neue Haas Grotesk Display Pro";
+}
+
+.left,
+.right {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.logo {
+  line-height: 1;
+  font-size: clamp(1rem, 3vw + 0.5rem, 2.2rem);
+  text-transform: uppercase;
+}
+
+.center {
+  position: absolute;
+  left: 44%;
+  top: 50px;
+
+  transform: translateY(-44%);
+  z-index: 1000;
+}
+
+.center a {
+  /* font-size: clamp(2rem, 6vw + 1rem, 4rem); */
+}
+
+.img-container {
+  width: 100%;
+  height: 100vh;
+}
+.content {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.content img {
+  width: 100%;
+  z-index: 1;
+}
+.img-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 475px) {
+  .nav-links {
+    justify-content: space-between;
+  }
+  .nav-links li {
+    font-size: 1rem;
+    flex: initial;
+  }
+  .nav-links li a {
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 760px) {
+  .nav-links li {
+    gap: 1.5rem;
+  }
+}

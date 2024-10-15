@@ -16,7 +16,7 @@ li {
 }
 
 a {
-  font-size: clamp(2rem, 4vw, 6vw);
+  font-size: clamp(2rem, 4vw, 3vw);
   font-family: "OTF Glusp";
   text-decoration: none;
   color: #e2dfd2;
