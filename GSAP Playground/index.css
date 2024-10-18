@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+html,
+body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: skyblue;
+  width: 100%;
+  padding: 8rem;
+  height: 100vh;
+}
+.box {
+  width: 10rem;
+  height: 10rem;
+  background-color: firebrick;
+  border-radius: 8px;
+  border-radius: 50%;
+}
+.box2 {
+  background-color: green;
+}
+.box3 {
+  background-color: orange;
+}
+.box4 {
+  background-color: blue;
+}
+.box5 {
+  background-color: pink;
+}
+.box6 {
+  background-color: purple;
+}
