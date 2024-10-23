@@ -17,27 +17,27 @@
 
 //make a tl animation using labels and relative timings
 
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
 
-tl.from([".box1, .box2, .box3"], {
-  x: -100,
-  duration: 1,
-  repeat: -1,
-  ease: "linear",
-  yoyo: true,
-}).to(
-  [".box7, .box6,.box5"],
-  {
-    x: 100,
-    duration: 1,
-    repeat: -1,
-    yoyo: true,
-  },
-  "<"
-);
+// tl.from([".box1, .box2, .box3"], {
+//   x: -100,
+//   duration: 1,
+//   repeat: -1,
+//   ease: "linear",
+//   yoyo: true,
+// }).to(
+//   [".box7, .box6,.box5"],
+//   {
+//     x: 100,
+//     duration: 1,
+//     repeat: -1,
+//     yoyo: true,
+//   },
+//   "<"
+// );
 //herman
-// let select = (e) => document.querySelector(e);
-// let selectAll = (e) => document.querySelectorAll(e);
+let select = (e) => document.querySelector(e);
+let selectAll = (e) => document.querySelectorAll(e);
 
 // let progressSlider = select("#progressSlider");
 // let time = select("#time");
@@ -65,3 +65,16 @@ tl.from([".box1, .box2, .box3"], {
 //   isPaused ? animation.play() : animation.pause();
 //   isPaused = !isPaused;
 // });
+
+//Callbacks
+const box = select(".box");
+gsap.to(box, {
+  x: 500,
+  onComplete: onComplete,
+  onCompleteParams: ["apple", 40],
+});
+
+function onComplete(message, val) {
+  // box.style.backgroundColor = "pink";
+  console.log(message, val);
+}
