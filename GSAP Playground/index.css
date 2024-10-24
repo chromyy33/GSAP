@@ -10,7 +10,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 .page1 {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,10 @@ body {
   height: 100vh;
   z-index: 0;
 }
-.box {
+h1 {
+  font-size: 3rem;
+}
+/* .box {
   position: relative;
   display: flex;
   justify-content: center;
@@ -32,8 +35,8 @@ body {
   z-index: 1;
  
   
-}
-#nav {
+} */
+/* #nav {
   width: 100%;
   display: flex;
   align-content: center;
@@ -42,15 +45,18 @@ body {
   bottom: 0;
   height: 50px;
   background: #333;
-}
+} */
 
 .line {
-  position: absolute;
+  /* position: absolute; */
   height: 20rem;
   background-color: red;
   width: 0.5rem;
   bottom: 50%;
   z-index: -1;
+}
+.span {
+  position: relative;
 }
 #nav div {
   align-self: center;
@@ -73,11 +79,13 @@ button {
   width: 5em;
 }
 
+.span {
+  position: relative;
+}
 #time {
   width: 80px;
 }
-
-.box2 {
+*/ .box2 {
   background-color: green;
 }
 .box3 {

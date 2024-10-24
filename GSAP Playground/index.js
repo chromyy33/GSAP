@@ -67,14 +67,55 @@ let selectAll = (e) => document.querySelectorAll(e);
 // });
 
 //Callbacks
-const box = select(".box");
-gsap.to(box, {
-  x: 500,
-  onComplete: onComplete,
-  onCompleteParams: ["apple", 40],
-});
+// const box = select(".box");
+// gsap.to(box, {
+//   x: 500,
+//   onComplete: onComplete,
+//   onCompleteParams: ["apple", 40],
+// });
 
-function onComplete(message, val) {
-  // box.style.backgroundColor = "pink";
-  console.log(message, val);
-}
+// function onComplete(message, val) {
+//   // box.style.backgroundColor = "pink";
+//   console.log(message, val);
+// }
+
+//gsap.killTweensOf
+// gsap.killTweensOf(".myClass");
+// gsap.killTweensOf(myObject, "opacity,x");
+
+// gsap.killTweensOf(myFunction);
+// Provides a simple way to call a function after a set amount of time, completely in-sync with the whole rendering loop (unlike a setTimeout() which may fire outside of the browser's screen refresh cycle). You can optionally pass any number of parameters to the function too.
+
+// //calls myFunction() after 1 second and passes 2 parameters:
+// gsap.delayedCall(1, myFunction, ["param1", "param2"]);
+
+// function myFunction(param1, param2) {
+//   //do stuff
+// }
+
+// To cancel/kill a delayed call, save a reference to it and then call .kill() on it when needed:
+
+// var delayedCall = gsap.delayedCall(1, myFunction);
+
+// // sometime later
+// delayedCall.kill();
+
+//gsap.utils.wrap
+const tl=gsap.timeline()
+const heading = select(".heading");
+heading.innerHTML = heading.innerText
+  .split("")
+  .map((char) => `<span class='span'>${char}</span>`)
+  .join("");
+// gsap.set(heading, { autoAlpha: 1 });
+const char = [...selectAll(".span")];
+tl
+  .from(".span", {
+    bottom: gsap.utils.wrap([-100, 100]),
+    rotation: gsap.utils.wrap([-100, 100]),
+    opacity: 0,
+    stagger: { each: 0.05 },
+  })
+  .to(".span", {
+    color: gsap.utils.wrap(["orange",'purple']),
+  });
